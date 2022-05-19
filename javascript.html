@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Cheatsheet</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Data Types</h1>
+    <dl>
+        <dt>String</dt>
+        <dd>text data enclosed with quotes. <code>let myString = 'My String'</code></dd>
+        <dt>Number</dt>
+        <dd>Number data that can be modified with <a href="#">primitive operators</a>.</dd>
+    </dl>
+    <h1>Variables</h1>
+    <dl>
+        <dt>var</dt>
+        <dd>Function-scope variable that can be accessed throughout a function. <code>var myVariable = 'Function-scope'</code></dd>
+        <dt>let</dt>
+        <dd>Block-scoped variable that can be accessed within the {} but not outside of it. Let signals that the value can be changed. <code>let myVariable = 'block-scope'</code></dd>
+        <dt>const</dt>
+        <dd>Constant variable. The value cannot be reassigned. Constant variables must be assigned a value when the variable is declared <code>const myVariable = 'Cannot be changed'</code></dd>
+    </dl>
+    <h1>Operators</h1>
+    <dl>
+        <dt id="primitiveOperators">Primitive operators</dt>
+        <dd>Basic math operators. Addition = +, Subtraction = -, multiplication = *, division = /</dd>
+        <dt>Mathematical assignment operators</dt>
+        <dd>Combines a <a href="#primitiveOperators">primitive operator</a> with the value assignment operator '=" <code>let x = 20;
+            x -= 5; // Can be written as x = x - 5
+            console.log(x); // Output: 15
+             
+            let y = 50;
+            y *= 2; // Can be written as y = y * 2
+            console.log(y); // Output: 100</code></dd>
+        <dt>The Increment and Decrement Operator</dt>
+        <dd>The increment operator will increase the value of the variable by 1. The decrement operator will decrease the value of the variable by 1. <code>let a = 10;
+            a++;
+            console.log(a); // Output: 11
+            let b = 20;
+            b--;
+            console.log(b); // Output: 19</code></dd>
+    </dl>
+</body>
+</html>
