@@ -4,7 +4,7 @@ dl {
     grid-template-rows: min-content max-content min-content;
     gap: 1rem;
 }
-code {
+pre {
     display: block;
     background-color: rgba(21, 31, 65, 0.727);
     padding: .5rem;
