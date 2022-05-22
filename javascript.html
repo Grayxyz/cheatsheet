@@ -205,5 +205,78 @@
                 // Prints: Enjoy your meal</pre>
         </dd>
         </dl>
+        <h1>Functions</h1>
+        <dl>
+          <dt>Functions</dt>
+          <dd>Functions are reusable blocks of code that groups a sequence of statements together to exeecute a specific task</dd>
+        </dl>
+        <dt>Function Declatation</dt>
+        <dd>A function declaration binds a function to a name, or an identifier.<br>
+          A function declaration consists of:
+          <ul>
+            <li>the function keyword </li>
+            <li>the name of the function followed by parentheses</li>
+            <li>A function body, or the block of statements required to perform a specific task, enclosed in the function’s curly brackets, { }</li>
+          </ul>
+          <pre>
+            function greetWorld() {
+              console.log('Hello, World!');
+              greetWorld(); // Output: Hello, World!
+            }</pre>
+        </dd>
+        <dt>Calling a Function</dt>
+        <dd>To call a function in your code, you type the function name followed by parentheses. The function call executes the function body, or all of the statements between the curly braces in the function declaration.</dd>
+        <dt>Parameters and Arguments</dt>
+        <dd>Parameters allow functions to accept input(s) and perform a task using the input(s). We use parameters as placeholders for information that will be passed to the function when it is called. When declaring a function add the names of the input values in the parentheses. When calling the function fill the values in in the parentheses to be passed to the function when it runs. <pre>function sayThanks(name) {
+          console.log('Thank you for your purchase '+ name + '! We appreciate your business.');
+        }
+        sayThanks('Cole')</pre></dd>
+        <dt>Default Parameters</dt>
+        <dd>Default parameters allow parameters to have a predetermined value in case there is no argument passed into the function or if the argument is undefined when called. The = operator to assign the parameter name a default value<pre>function greeting (name = 'stranger') {
+          console.log(`Hello, ${name}!`)
+        }
+         
+        greeting('Nick') // Output: Hello, Nick!
+        greeting() // Output: Hello, stranger!</pre></dd>
+        <dt>Return</dt>
+        <dd>Return passes information back from the function call. Without returning the value it will remain undefined even though the function calculated the input arguments correctly.<pre>function rectangleArea(width, height) {
+          if (width < 0 || height < 0) {
+            return 'You need positive integers to calculate area!';
+          }
+          return width * height;
+        }</pre></dd>
+        <dt>Helper Functions</dt>
+        <dd>Helper functions return the value of another function within a function. This way we can use functions to break down logic into smaller, more manageable pieces and reuse them later. <pre>function multiplyByNineFifths(number) {
+          return number * (9/5);
+        };
+         
+        function getFahrenheit(celsius) {
+          return multiplyByNineFifths(celsius) + 32;
+        };
+         
+        getFahrenheit(15); // Returns 59</pre></dd>
+        <dt>Function Expressions</dt>
+        <dd>To define a function inside an expression, we can use the function keyword. In a function expression, the function name is usually omitted. A function with no name is called an anonymous function. A function expression is often stored in a variable in order to refer to it.<pre>const plantNeedsWater = function(day) {
+          if (day === 'Wednesday') {
+            return true;
+          } else {
+            return false;
+          }
+        }
+        console.log(plantNeedsWater('Wednesday'))</pre></dd>
+        <dt>Arrow Functions</dt>
+        <dd>Arrow functions remove the need to type out the keyword function every time you need to create a function. Instead, you first include the parameters inside the ( ) and then add an arrow => that points to the function body surrounded in { } like this:</dd>
+        <dt>Concise Body Arrow Functions</dt>
+        <dd>
+          <ul>
+            <li>Functions that take only a single parameter do not need that parameter to be enclosed in parentheses. However, if a function takes zero or multiple parameters, parentheses are required.</li>
+            <li>A function body composed of a single-line block does not need curly braces. Without the curly braces, whatever that line evaluates will be automatically returned. The contents of the block should immediately follow the arrow => and the return keyword can be removed. This is referred to as implicit return.</li>
+          </ul>
+          <pre>const squareNum = (num) => {
+            return num * num;
+          };</pre>
+          refactors to 
+          <pre>const squareNum = num => num * num;</pre>
+        </dd>
 </body>
 </html>
