@@ -54,7 +54,7 @@
             <pre>const myPet = 'armadillo'
             console.log(`I own a pet ${myPet}.`)
             // Output: I own a pet armadillo.</pre></dd>
-        <dt>ypeof Operator</dt>
+        <dt>typeof Operator</dt>
         <dd> If you need to check the data type of a variable’s value, you can use the typeof operator. The typeof operator checks the value to its right and returns, or passes back, a string of the data type.
             <pre>const unknown1 = 'foo';
                 console.log(typeof unknown1); // Output: string
@@ -209,7 +209,7 @@
         <dl>
           <dt>Functions</dt>
           <dd>Functions are reusable blocks of code that groups a sequence of statements together to exeecute a specific task</dd>
-        </dl>
+        
         <dt>Function Declatation</dt>
         <dd>A function declaration binds a function to a name, or an identifier.<br>
           A function declaration consists of:
@@ -223,7 +223,7 @@
               console.log('Hello, World!');
               greetWorld(); // Output: Hello, World!
             }</pre>
-        </dd>
+        
         <dt>Calling a Function</dt>
         <dd>To call a function in your code, you type the function name followed by parentheses. The function call executes the function body, or all of the statements between the curly braces in the function declaration.</dd>
         <dt>Parameters and Arguments</dt>
@@ -278,5 +278,77 @@
           refactors to 
           <pre>const squareNum = num => num * num;</pre>
         </dd>
+      </dl>
+      <h1>Arrays</h1>
+      <dl>
+        <dt>Array Literal</dt>
+        <dd>
+          Creates arrays by wrapping items in square brackets.
+          <ul>
+            <li>The array is represented by the square brackets [] and the content inside.</li>
+            <li>Each content item inside an array is called an element.</li>
+            <li>Elements inside an array can be different data types</li>
+            <li>arrays can be storedd to variables</li>
+            <li></li>
+          </ul>
+        </dd>
+        <dt>Index</dt>
+        <dd>The numbred position of each element inside an array. Access indexed elements with bracket notation
+          <pre>const hello = 'Hello World';
+            console.log(hello[6]);
+            // Output: W</pre>
+        </dd>
+        <dt>Arrays with let and const</dt>
+        <dd>Variables declared with the const keyword cannot be reassigned. However, elements in an array declared with const remain mutable. Meaning that we can change the contents of a const array, but cannot reassign a new array or a different value.</dd>
+        <dt>The .length property</dt>
+        <dd>returns the number of elements in an array or the number of characters in a string</dd>
+
+        <dt>The .push() Method</dt>
+        <dd>Adds elements to the end of an array. .push() can take a single argument or multiple arguments separated by commas. Notice that .push() changes, or mutates, itemTracker. You might also see .push() referred to as a destructive array method since it changes the initial array</dd>
+        <dt>The .pop() Method</dt>
+        <dd>Removes the last item from an array.</dd>
+        <dt>The .shift() Method</dt>
+        <dd>Removes and returns the first element in an array</dd>
+
+        <dt>The .unshift() Method</dt>
+        <dd>Takes an argument and adds it to the beginning of an array</dd>
+
+        <dt>The .slice() method</dt>
+        <dd>Extracts a selection of elements from an array. The selection includes start to end (but end is not included<pre>const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+
+          console.log(animals.slice(2));
+          // expected output: Array ["camel", "duck", "elephant"]
+          
+          console.log(animals.slice(2, 4));
+          // expected output: Array ["camel", "duck"]
+          
+          console.log(animals.slice(1, 5));
+          // expected output: Array ["bison", "camel", "duck", "elephant"]
+          
+          console.log(animals.slice(-2));
+          // expected output: Array ["duck", "elephant"]
+          
+          console.log(animals.slice(2, -1));
+          // expected output: Array ["camel", "duck"]
+          
+          console.log(animals.slice());
+          // expected output: Array ["ant", "bison", "camel", "duck", "elephant"]</pre></dd>
+
+          <dt>The .indexOf() method</dt>
+          <dd>.indexOf() takes an argument that matches an element in an arry and returns the index number of that element </dd>
+
+          <dt>Nested Arrays</dt>
+          <dd>Arrays can store other arrays. To access the data stored in nested arrays chain bracket notation. <pre>const nestedArr = [[1], [2, 3]];
+ 
+            console.log(nestedArr[1]); // Output: [2, 3]
+            console.log(nestedArr[1][0]); // Output: 2</pre></dd>
+          <dt>the .splice() method</dt>
+          <dd>Replaces portions of an array with new values. The first argument is the starting index of the splice. The second number is the number of indicies to be replaced, and all following values will be added at the indicated index. <pre>splice(start)
+            splice(start, deleteCount)
+            splice(start, deleteCount, item1)
+            splice(start, deleteCount, item1, item2, itemN)</pre></dd>
+      </dl>
+
+
 </body>
 </html>
