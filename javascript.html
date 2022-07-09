@@ -54,7 +54,7 @@
             <pre>const myPet = 'armadillo'
             console.log(`I own a pet ${myPet}.`)
             // Output: I own a pet armadillo.</pre></dd>
-        <dt>ypeof Operator</dt>
+        <dt>typeof Operator</dt>
         <dd> If you need to check the data type of a variable’s value, you can use the typeof operator. The typeof operator checks the value to its right and returns, or passes back, a string of the data type.
             <pre>const unknown1 = 'foo';
                 console.log(typeof unknown1); // Output: string
@@ -209,6 +209,7 @@
         <dl>
           <dt>Functions</dt>
           <dd>Functions are reusable blocks of code that groups a sequence of statements together to exeecute a specific task</dd>
+        
         <dt>Function Declatation</dt>
         <dd>A function declaration binds a function to a name, or an identifier.<br>
           A function declaration consists of:
@@ -222,7 +223,7 @@
               console.log('Hello, World!');
               greetWorld(); // Output: Hello, World!
             }</pre>
-        </dd>
+        
         <dt>Calling a Function</dt>
         <dd>To call a function in your code, you type the function name followed by parentheses. The function call executes the function body, or all of the statements between the curly braces in the function declaration.</dd>
         <dt>Parameters and Arguments</dt>
@@ -278,5 +279,285 @@
           <pre>const squareNum = num => num * num;</pre>
         </dd>
       </dl>
+      <h1>Arrays</h1>
+      <dl>
+        <dt>Array Literal</dt>
+        <dd>
+          Creates arrays by wrapping items in square brackets.
+          <ul>
+            <li>The array is represented by the square brackets [] and the content inside.</li>
+            <li>Each content item inside an array is called an element.</li>
+            <li>Elements inside an array can be different data types</li>
+            <li>arrays can be storedd to variables</li>
+            <li></li>
+          </ul>
+        </dd>
+        <dt>Index</dt>
+        <dd>The numbred position of each element inside an array. Access indexed elements with bracket notation
+          <pre>const hello = 'Hello World';
+            console.log(hello[6]);
+            // Output: W</pre>
+        </dd>
+        <dt>Arrays with let and const</dt>
+        <dd>Variables declared with the const keyword cannot be reassigned. However, elements in an array declared with const remain mutable. Meaning that we can change the contents of a const array, but cannot reassign a new array or a different value.</dd>
+        <dt>The .length property</dt>
+        <dd>returns the number of elements in an array or the number of characters in a string</dd>
+
+        <dt>The .push() Method</dt>
+        <dd>Adds elements to the end of an array. .push() can take a single argument or multiple arguments separated by commas. Notice that .push() changes, or mutates, itemTracker. You might also see .push() referred to as a destructive array method since it changes the initial array</dd>
+        <dt>The .pop() Method</dt>
+        <dd>Removes the last item from an array.</dd>
+        <dt>The .shift() Method</dt>
+        <dd>Removes and returns the first element in an array</dd>
+
+        <dt>The .unshift() Method</dt>
+        <dd>Takes an argument and adds it to the beginning of an array</dd>
+
+        <dt>The .slice() method</dt>
+        <dd>Extracts a selection of elements from an array. The selection includes start to end (but end is not included<pre>const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+
+          console.log(animals.slice(2));
+          // expected output: Array ["camel", "duck", "elephant"]
+          
+          console.log(animals.slice(2, 4));
+          // expected output: Array ["camel", "duck"]
+          
+          console.log(animals.slice(1, 5));
+          // expected output: Array ["bison", "camel", "duck", "elephant"]
+          
+          console.log(animals.slice(-2));
+          // expected output: Array ["duck", "elephant"]
+          
+          console.log(animals.slice(2, -1));
+          // expected output: Array ["camel", "duck"]
+          
+          console.log(animals.slice());
+          // expected output: Array ["ant", "bison", "camel", "duck", "elephant"]</pre></dd>
+
+          <dt>The .indexOf() method</dt>
+          <dd>.indexOf() takes an argument that matches an element in an arry and returns the index number of that element </dd>
+
+          <dt>Nested Arrays</dt>
+          <dd>Arrays can store other arrays. To access the data stored in nested arrays chain bracket notation. <pre>const nestedArr = [[1], [2, 3]];
+ 
+            console.log(nestedArr[1]); // Output: [2, 3]
+            console.log(nestedArr[1][0]); // Output: 2</pre></dd>
+          <dt>the .splice() method</dt>
+          <dd>Replaces portions of an array with new values. The first argument is the starting index of the splice. The second number is the number of indicies to be replaced, and all following values will be added at the indicated index. <pre>splice(start)
+            splice(start, deleteCount)
+            splice(start, deleteCount, item1)
+            splice(start, deleteCount, item1, item2, itemN)</pre></dd>
+      </dl>
+      <h1>Loops</h1>
+      <dl>
+        <dt>For Loop</dt>
+        <dd>Iterates an instruction a given number of times. A for loop contains three expressions separated by ; inside the parentheses:
+          <ul>
+            <li>an initialization starts the loop and can also be used to declare the iterator variable.</li>
+            <li>a stopping condition is the condition that the iterator variable is evaluated against— if the condition evaluates to true the code block will run, and if it evaluates to false the code will stop.</li>
+            <li>an iteration statement is used to update the iterator variable on each loop.</li>
+          </ul>
+          <pre>for (let counter = 0; counter < 4; counter++) {
+            console.log(counter);
+          }</pre>
+        </dd>
+        <dt>While Loop</dt>
+        <dd>Evaluatses whether the while condition is true. When it's false, the loop stops.
+          <pre>// A while loop that prints 1, 2, and 3
+            let counterTwo = 1;
+            while (counterTwo < 4) {
+              console.log(counterTwo);
+              counterTwo++;
+            }</pre>
+        </dd>
+        <dt>Do...While Statements</dt>
+        <dd>Similar to while loop but will run at least once, then continue running as long as the condition is true. <pre>const firstMessage = 'I will print!';
+          const secondMessage = 'I will not print!'; 
+           
+          // A do while with a stopping condition that evaluates to false
+          do {
+           console.log(firstMessage)
+          } while (true === false);
+           
+          // A while loop with a stopping condition that evaluates to false
+          while (true === false){
+            console.log(secondMessage)
+          };</pre></dd>
+
+          <dt>for…of loop</dt>
+          <dd>A shorter, more readable for loop that removes some potential for syntax issues. It simply iterates over the objects in the array, string or array-like-object until it reaches the last item. It doesn't provide access to the index numbers within the block<br>A for loop would look like<pre>const hobbies = ['singing', 'eating', 'quidditch', 'writing'];
+ 
+            for (let i = 0; i < hobbies.length; i++) {
+              console.log(`I enjoy ${hobbies[i]}.`);
+            }</pre>
+          a for...of loop would look like this <pre>const hobbies = ['singing', 'eating', 'quidditch', 'writing'];
+ 
+            for (const hobby of hobbies) {
+              console.log(`I enjoy ${hobby}.`);
+            }</pre></dd>
+      </dl>
+
+      <h1>Objects</h1>
+      <dl>
+        <dt>Object Literals</dt>
+        <dd>Objects can be assigned to variables just like any JavaScript type. Use curly braces, {}, to designate an <i>object literal:</i>. Data is organized into key-value pairs. A key is like a variable name that points to a location in memory that holds a value. We make a key-value pair by writing the key’s name, or identifier, followed by a colon and then the value. We separate each key-value pair in an object literal with a comma (,). Keys are strings, but when we have a key that does not have any special characters in it, JavaScript allows us to omit the quotation marks:</dd>
+
+        <dt>Accessing Properties</dt>
+        <dd><h3>Dot notation</h3> returns the property associated with the key. If no key exists in the object it will return undefined<pre>let spaceship = {
+          homePlanet: 'Earth',
+          color: 'silver'
+        };
+        spaceship.homePlanet; // Returns 'Earth',
+        spaceship.color; // Returns 'silver',</pre>
+        <h3>Bracket notation</h3>
+        Like using bracket notation with arrays. To use bracket notation to access an object’s property, we pass in the property name (key) as a string. must use bracket notation when accessing keys that have numbers, spaces, or special characters in them. Without bracket notation in these situations, our code would throw an error.
+        <pre>
+          let spaceship = {
+            'Fuel Type': 'Turbo Fuel',
+            'Active Duty': true,
+            homePlanet: 'Earth',
+            numCrew: 5
+          };
+          spaceship['Active Duty'];   // Returns true
+          spaceship['Fuel Type'];   // Returns  'Turbo Fuel'
+          spaceship['numCrew'];   // Returns 5
+          spaceship['!!!!!!!!!!!!!!!'];   // Returns undefined
+        </pre>
+        With bracket notation you can also use a variable inside the brackets to select the keys of an object. This can be especially helpful when working with functions: 
+        <pre>
+          let returnAnyProp = (objectName, propName) => objectName[propName];
+ 
+returnAnyProp(spaceship, 'homePlanet'); // Returns 'Earth'
+        </pre>
+      </dd>
+
+      <dt>Poperty Assignment</dt>
+      <dd>Once we’ve defined an object, we’re not stuck with all the properties we wrote. Objects are mutable meaning we can update them after we create them!
+
+        We can use either dot notation, ., or bracket notation, [], and the assignment operator, = to add new key-value pairs to an object or change an existing property. If the property already exists on the object, whatever value it held before will be replaced with the newly assigned value. If there was no property with that name, a new property will be added to the object.
+        <pre>
+          const spaceship = {type: 'shuttle'};
+spaceship = {type: 'alien'}; // TypeError: Assignment to constant variable.
+spaceship.type = 'alien'; // Changes the value of the type property
+spaceship.speed = 'Mach 5'; // Creates a new key of 'speed' with a value of 'Mach 5'
+        </pre>
+        Remove property value pair with the delete keyword
+        <pre>
+          const spaceship = {
+            'Fuel Type': 'Turbo Fuel',
+            homePlanet: 'Earth',
+            mission: 'Explore the universe' 
+          };
+           
+          delete spaceship.mission;  // Removes the mission property
+        </pre>
+      </dd>
+
+      <dt>Methods</dt>
+      <dd>A function stored on an object is called a method. A property is what an object has. A Method is what it does. ES6 syntax doesn't require the colon and function keyword
+        <pre>
+          const alienShip = {
+            invade: function () { 
+              console.log('Hello! We have come to dominate your planet. Instead of Earth, it shall be called New Xaculon.')
+            }
+          };
+          
+          const alienShip = {
+            invade () { 
+              console.log('Hello! We have come to dominate your planet. Instead of Earth, it shall be called New Xaculon.')
+            }
+          };
+        </pre>
+      </dd>
+
+      <dt>Nested Objects</dt>
+      <dd>
+        Objects can be nested within objects and each of those can have multiple properties, or even more objects within them. chain operators to access nested properties. We’ll have to pay attention to which operator makes sense to use in each layer. 
+        <pre>
+          const spaceship = {
+            telescope: {
+               yearBuilt: 2018,
+               model: '91031-XLT',
+               focalLength: 2032 
+            },
+           crew: {
+               captain: { 
+                   name: 'Sandra', 
+                   degree: 'Computer Engineering', 
+                   encourageTeam() { console.log('We got this!') } 
+                }
+           },
+           engine: {
+               model: 'Nimbus2000'
+            },
+            nanoelectronics: {
+                computer: {
+                   terabytes: 100,
+                   monitors: 'HD'
+                },
+               'back-up': {
+                  battery: 'Lithium',
+                  terabytes: 50
+                }
+           }
+       }; 
+        </pre>
+      </dd>
+
+      <dt>Pass By Reference</dt>
+      <dd>Objects are passed by reference. This means when we pass a variable assigned to an object into a function as an argument, the computer interprets the parameter name as pointing to the space in memory holding that object. As a result, functions which change object properties actually mutate the object permanently (even when the object is assigned to a const variable).
+        <pre>const spaceship = {
+          homePlanet : 'Earth',
+          color : 'silver'
+        };
+         
+        let paintIt = obj => {
+          obj.color = 'glorious gold'
+        };
+         
+        paintIt(spaceship);
+         
+        spaceship.color // Returns 'glorious gold'</pre>
+      </dd>
+
+      <dt>For...in</dt>
+      <dd>For, while, for...if and do while don't work on objects because objects aren't ordered. For...in Executes a block of code for each property in an object</dd>
+
+      <dt>the this keyword</dt>
+      <dd>Refers to the calling function</dd>
+
+      <dt>This and arrow functions</dt>
+      <dd>Arrow functions cannot be used with the this keyword. This is a global keyword and one of the limitations of arrow functions is that they inherently bind this to themselves, not the calling function. Using this with an arrow function will always return undefined. Use either the longhand
+        <pre>const goat = {
+          name: 'Billy',
+          color: 'biege',
+          giveDetails: function() {
+            console.log(`${this.name} is a ${this.color} goat.`)
+          }
+        }</pre>
+        or the shorthand function declaration 
+        <pre>const goat = {
+          name: 'Billy',
+          color: 'biege',
+          giveDetails(){
+            console.log(`${this.name} is a ${this.color} goat.`)
+          }
+        }</pre>
+      </dd>
+
+      <dt>Privacy</dt>
+      <dd>Javascript does not have built in privacy to prevent mutable objects from being altered in a way that breaks the code. Instead devs use _ to prepend properties that should not be changed</dd>
+
+      <dt>Getters</dt>
+      <dd>retrieve the value of properties in an object without altering them. Make sure to use a name for the getter method that is different from the property key (hence the _ prepending the key</dd>
+
+      <dt>Setters</dt>
+      <dd>Set the value of object properties</dd>
+
+      <dt>Factory Functions</dt>
+
+      </dl>
+
+
 </body>
 </html>
